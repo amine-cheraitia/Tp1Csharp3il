@@ -1,0 +1,17 @@
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\TP1prj.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\TP1prj.AssemblyInfoInputs.cache
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\TP1prj.AssemblyInfo.cs
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\TP1prj.csproj.CoreCompileInputs.cache
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\bin\Debug\net7.0\TP1prj.exe
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\bin\Debug\net7.0\TP1prj.deps.json
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\bin\Debug\net7.0\TP1prj.runtimeconfig.json
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\bin\Debug\net7.0\TP1prj.dll
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\bin\Debug\net7.0\TP1prj.pdb
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\TP1prj.csproj.AssemblyReference.cache
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\TP1prj.csproj.CopyComplete
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\TP1prj.dll
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\refint\TP1prj.dll
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\TP1prj.pdb
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\TP1prj.genruntimeconfig.cache
+C:\Users\amine\Desktop\3il MS2D 1\C#_cours\CsharpProjectsTP\TP1prj\obj\Debug\net7.0\ref\TP1prj.dll
