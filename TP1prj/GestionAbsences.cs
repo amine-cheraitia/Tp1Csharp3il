@@ -80,7 +80,7 @@ public class GestionAbsences
             }
 
 
-            Console.WriteLine("la taille de ma liste est de " + ListeEtudiantsAbsents.Count());
+            /*  Console.WriteLine("la taille de ma liste est de " + ListeEtudiantsAbsents.Count()); */
 
         }
         if (ListeAlternant.Count > 0)
