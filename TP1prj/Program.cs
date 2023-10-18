@@ -4,6 +4,7 @@
 
     {
         GestionAbsences gestionAbsences = new GestionAbsences();
+        gestionAbsences.ChargerListeEtudiantsDepuisFichier("listeEtudiants.json");
         Authentification authentification = new Authentification(gestionAbsences);
 
         authentification.tryToAuth();

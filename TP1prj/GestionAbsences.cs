@@ -7,22 +7,39 @@ public class GestionAbsences
     public List<Etudiant> ListeEtudiants { get; set; }
     public List<Etudiant> ListeEtudiantsAbsents { get; set; }
 
+    /*     public GestionAbsences()
+        {
+            ListeEtudiants = new List<Etudiant>
+            {
+                new Etudiant { nom = "Brice", mode="FA" },
+                new Etudiant { nom = "Amine", mode="FE" },
+                new Etudiant { nom = "Oussama", mode="FA" },
+                new Etudiant { nom = "Khalil", mode="FA" },
+                new Etudiant { nom = "Emnna", mode="FE" },
+                new Etudiant { nom = "Mouadhafer", mode="FA" },
+                new Etudiant { nom = "Claudia", mode="FE" }
+            };
+
+            ListeEtudiantsAbsents = new List<Etudiant>();
+        } */
     public GestionAbsences()
     {
-        ListeEtudiants = new List<Etudiant>
-        {
-            new Etudiant { nom = "Brice", mode="FA" },
-            new Etudiant { nom = "Amine", mode="FE" },
-            new Etudiant { nom = "Oussama", mode="FA" },
-            new Etudiant { nom = "Khalil", mode="FA" },
-            new Etudiant { nom = "Emnna", mode="FE" },
-            new Etudiant { nom = "Mouadhafer", mode="FA" },
-            new Etudiant { nom = "Claudia", mode="FE" }
-        };
-
+        ListeEtudiants = new List<Etudiant>();
         ListeEtudiantsAbsents = new List<Etudiant>();
     }
 
+    public void ChargerListeEtudiantsDepuisFichier(string cheminFichier)
+    {
+        if (File.Exists(cheminFichier))
+        {
+            string jsonData = File.ReadAllText(cheminFichier);
+            ListeEtudiants = JsonConvert.DeserializeObject<List<Etudiant>>(jsonData);
+        }
+        else
+        {
+            Console.WriteLine("Le fichier JSON n'existe pas.");
+        }
+    }
     public void VerifierPresences()
     {
         Console.Clear();

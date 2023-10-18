@@ -1,12 +1,30 @@
-{
-    "personnes": [
-      { "nom": "Mohamed Amine", "mode": "fe" },
-      { "nom": "Brice", "mode": "fe" },
-      { "nom": "Oussama", "mode": "fa" },
-      { "nom": "Claudia", "mode": "fa" },
-      { "nom": "Moudafher", "mode": "fe" },
-      { "nom": "Emna", "mode": "fa" },
-      { "nom": "Khalil", "mode": "fe" }
-    ]
+[
+  {
+    "nom": "Brice",
+    "mode": "FA"
+  },
+  {
+    "nom": "Amine",
+    "mode": "FE"
+  },
+  {
+    "nom": "Oussama",
+    "mode": "FA"
+  },
+  {
+    "nom": "Khalil",
+    "mode": "FA"
+  },
+  {
+    "nom": "Emnna",
+    "mode": "FE"
+  },
+  {
+    "nom": "Mouadhafer",
+    "mode": "FA"
+  },
+  {
+    "nom": "Claudia",
+    "mode": "FE"
   }
-  
+]
