@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 public class GestionAbsences
 {
     public List<Etudiant> ListeEtudiants { get; set; }
+    public List<Etudiant> ListeAlternant { get; set; }
     public List<Etudiant> ListeEtudiantsAbsents { get; set; }
 
     /*     public GestionAbsences()
@@ -24,6 +25,7 @@ public class GestionAbsences
         } */
     public GestionAbsences()
     {
+        ListeAlternant = new List<Etudiant>();
         ListeEtudiants = new List<Etudiant>();
         ListeEtudiantsAbsents = new List<Etudiant>();
     }
@@ -63,10 +65,31 @@ public class GestionAbsences
             }
             else
             {
+                if (etudiant.mode == "FA")
+                {
+                    ListeAlternant.Add(etudiant);
+                }
                 etudiant.EstPresent = true;
             }
             Console.WriteLine("la taille de ma liste est de " + ListeEtudiantsAbsents.Count());
+
         }
+        if (ListeAlternant.Count > 0)
+        {
+            Console.WriteLine("il est nécessaire que les étudiants FA suivants signent :");
+            int longueurMaxNom = ListeAlternant.Max(e => e.nom.Length) + 2; // Trouve la longueur maximale du nom
+            foreach (var etudiantAlternant in ListeAlternant)
+            {
+
+                string nomAjuste = etudiantAlternant.nom.PadRight(longueurMaxNom);
+                Console.WriteLine($"\t- {nomAjuste} - {etudiantAlternant.mode}");
+
+            }
+            Console.ReadKey();
+            Console.Clear();
+
+        }
+
     }
 
     public void AfficherEtudiantsAbsents()

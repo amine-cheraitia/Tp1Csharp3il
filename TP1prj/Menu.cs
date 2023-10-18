@@ -39,6 +39,7 @@ public class Menu
                 Environment.Exit(0);
                 break;
             default:
+                Console.Clear();
                 Console.WriteLine("Choix invalide.");
                 break;
         }
