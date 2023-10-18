@@ -1,0 +1,12 @@
+{
+    "personnes": [
+      { "nom": "Mohamed Amine", "mode": "fe" },
+      { "nom": "Brice", "mode": "fe" },
+      { "nom": "Oussama", "mode": "fa" },
+      { "nom": "Claudia", "mode": "fa" },
+      { "nom": "Moudafher", "mode": "fe" },
+      { "nom": "Emna", "mode": "fa" },
+      { "nom": "Khalil", "mode": "fe" }
+    ]
+  }
+  

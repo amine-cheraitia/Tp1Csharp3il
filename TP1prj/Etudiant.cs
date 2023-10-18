@@ -1,7 +1,7 @@
 
 public class Etudiant
 {
-    public string Nom { get; set; }
+    public string nom { get; set; }
     public bool EstPresent { get; set; }
-    public string Statut { get; set; }
+    public string mode { get; set; }
 }

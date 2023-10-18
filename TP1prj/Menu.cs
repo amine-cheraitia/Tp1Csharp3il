@@ -1,6 +1,12 @@
 
 public class Menu
 {
+    private GestionAbsences gestionAbsences;
+
+    public Menu(GestionAbsences gestionAbsences)
+    {
+        this.gestionAbsences = gestionAbsences;
+    }
     public void AfficherMenu()
     {
         Console.WriteLine("Menu de l'application :");
@@ -11,15 +17,20 @@ public class Menu
 
         var choix = Console.ReadLine();
 
+        /* Console.Clear(); */
+
         switch (choix)
         {
             case "1":
                 // Appel de la méthode SaisirPresence de la classe Appel
-                var apl = new Appel();
-                apl.SaisirPresence();
+
+                gestionAbsences.VerifierPresences();
                 break;
             case "2":
                 // Appel de la méthode AfficherAbsents de la classe Appel
+                gestionAbsences.AfficherEtudiantsAbsents();
+                Console.ReadKey();
+                Console.Clear();
                 break;
             case "3":
                 // Appel de la méthode EnregistrerDonneesEnJson de la classe Appel
