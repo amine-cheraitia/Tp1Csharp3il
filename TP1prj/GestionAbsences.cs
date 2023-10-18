@@ -8,21 +8,6 @@ public class GestionAbsences
     public List<Etudiant> ListeAlternant { get; set; }
     public List<Etudiant> ListeEtudiantsAbsents { get; set; }
 
-    /*     public GestionAbsences()
-        {
-            ListeEtudiants = new List<Etudiant>
-            {
-                new Etudiant { nom = "Brice", mode="FA" },
-                new Etudiant { nom = "Amine", mode="FE" },
-                new Etudiant { nom = "Oussama", mode="FA" },
-                new Etudiant { nom = "Khalil", mode="FA" },
-                new Etudiant { nom = "Emnna", mode="FE" },
-                new Etudiant { nom = "Mouadhafer", mode="FA" },
-                new Etudiant { nom = "Claudia", mode="FE" }
-            };
-
-            ListeEtudiantsAbsents = new List<Etudiant>();
-        } */
     public GestionAbsences()
     {
         ListeAlternant = new List<Etudiant>();
@@ -40,6 +25,19 @@ public class GestionAbsences
         else
         {
             Console.WriteLine("Le fichier JSON n'existe pas.");
+        }
+    }
+    //charger ma mosye des absents
+    public void ChargerListeAbsentsDepuisFichier(string cheminFichier)
+    {
+        if (File.Exists(cheminFichier))
+        {
+            string jsonData = File.ReadAllText(cheminFichier);
+            ListeEtudiantsAbsents = JsonConvert.DeserializeObject<List<Etudiant>>(jsonData);
+        }
+        else
+        {
+            Console.WriteLine("Le fichier JSON des absents n'existe pas.");
         }
     }
     //sauvegarder les absents dans un fichier json
