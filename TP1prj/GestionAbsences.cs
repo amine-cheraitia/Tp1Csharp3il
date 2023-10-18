@@ -29,7 +29,7 @@ public class GestionAbsences
         ListeEtudiants = new List<Etudiant>();
         ListeEtudiantsAbsents = new List<Etudiant>();
     }
-
+    //charger la liste des étudiants
     public void ChargerListeEtudiantsDepuisFichier(string cheminFichier)
     {
         if (File.Exists(cheminFichier))
@@ -41,6 +41,13 @@ public class GestionAbsences
         {
             Console.WriteLine("Le fichier JSON n'existe pas.");
         }
+    }
+    //sauvegarder les absents dans un fichier json
+    public void SauvegarderListeAbsentsDansFichier(string cheminFichier)
+    {
+        string jsonData = JsonConvert.SerializeObject(ListeEtudiantsAbsents, Formatting.Indented);
+        File.WriteAllText(cheminFichier, jsonData);
+        Console.WriteLine("Liste des absents sauvegardée dans un fichier JSON.");
     }
     public void VerifierPresences()
     {
@@ -71,6 +78,8 @@ public class GestionAbsences
                 }
                 etudiant.EstPresent = true;
             }
+
+
             Console.WriteLine("la taille de ma liste est de " + ListeEtudiantsAbsents.Count());
 
         }
@@ -89,6 +98,7 @@ public class GestionAbsences
             Console.Clear();
 
         }
+        SauvegarderListeAbsentsDansFichier("absents.json");
 
     }
 
