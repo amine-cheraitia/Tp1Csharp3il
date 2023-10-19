@@ -44,24 +44,40 @@ public class Authentification
 
     public void tryToAuth()
     {
-        Console.WriteLine("Veuillez entrer votre nom d'utilisateur :");
-        var utilisateurSaisi = Console.ReadLine();
-        Console.WriteLine("Veuillez entrer votre mot de passe :");
-        var motDePasseSaisi = Console.ReadLine();
-
-        if (Authentifier(utilisateurSaisi, motDePasseSaisi))
+        int tentative = 1;
+        Boolean checkAuth = false;
+        while (checkAuth == false)
         {
             Console.Clear();
-            var menu = new Menu(gestionAbsences);
-            while (true)
+
+            Console.WriteLine("Veuillez entrer votre nom d'utilisateur :");
+            var utilisateurSaisi = Console.ReadLine();
+            Console.WriteLine("Veuillez entrer votre mot de passe :");
+            var motDePasseSaisi = Console.ReadLine();
+
+            if (Authentifier(utilisateurSaisi, motDePasseSaisi))
             {
-                menu.AfficherMenu();
+                Console.Clear();
+                var menu = new Menu(gestionAbsences);
+                while (true)
+                {
+                    menu.AfficherMenu();
+                }
+                checkAuth = true;
             }
-        }
-        else
-        {
-            Console.WriteLine("Authentification échouée. L'application se ferme.");
-            Environment.Exit(0);
+            else
+            {
+                if (tentative == 3)
+                {
+                    Console.WriteLine("Authentification échouée pour la troisieme fois. L'application se ferme.");
+                    Environment.Exit(0);
+                }
+                tentative++;
+                Console.WriteLine("Authentification échouée");
+                Console.ReadKey();
+
+
+            }
         }
     }
 
