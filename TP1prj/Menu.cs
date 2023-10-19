@@ -55,6 +55,7 @@ public class Menu
                 Console.Clear();
                 gestionAbsences.LireStatDepuisFichier("stat.json");
                 Console.ReadKey();
+                Console.Clear();
                 break;
             case "5":
                 Console.Clear();

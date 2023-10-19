@@ -1,21 +1,51 @@
 [
   {
+    "nom": "Brice",
+    "EstPresent": false,
+    "mode": "FA"
+  },
+  {
     "nom": "Amine",
     "EstPresent": false,
     "mode": "FE"
   },
   {
-    "nom": "Mouadhafer",
+    "nom": "Oussama",
     "EstPresent": false,
     "mode": "FA"
   },
   {
-    "nom": "Claudia",
+    "nom": "Khalil",
+    "EstPresent": false,
+    "mode": "FA"
+  },
+  {
+    "nom": "Emnna",
+    "EstPresent": false,
+    "mode": "FE"
+  },
+  {
+    "nom": "Marie hélène",
+    "EstPresent": false,
+    "mode": "FA"
+  },
+  {
+    "nom": "Hay",
+    "EstPresent": false,
+    "mode": "FE"
+  },
+  {
+    "nom": "Jon Doe",
     "EstPresent": false,
     "mode": "FA"
   },
   {
     "nom": "Alice",
+    "EstPresent": false,
+    "mode": "FA"
+  },
+  {
+    "nom": "Bob",
     "EstPresent": false,
     "mode": "FA"
   }
