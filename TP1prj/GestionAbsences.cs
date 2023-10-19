@@ -45,7 +45,7 @@ public class GestionAbsences
     {
         string jsonData = JsonConvert.SerializeObject(ListeEtudiantsAbsents, Formatting.Indented);
         File.WriteAllText(cheminFichier, jsonData);
-        Console.WriteLine("Liste des absents sauvegardée dans un fichier JSON.");
+
     }
     public void VerifierPresences()
     {
@@ -100,6 +100,9 @@ public class GestionAbsences
 
         }
         SauvegarderListeAbsentsDansFichier("absents.json");
+        CalculerMoyenneAbsencesEnPourcentage();
+        SauvegarderMoyenneAbsencesDansFichier("stat.json");
+
 
     }
 
@@ -124,4 +127,61 @@ public class GestionAbsences
             Console.WriteLine("La liste des absences est actuellement vide. Avez-vous pensé à vérifier qui est absent en classe ");
         }
     }
+    //stat
+    public double CalculerMoyenneAbsencesEnPourcentage()
+    {
+        if (ListeEtudiants.Count > 0)
+        {
+            int nombreAbsents = ListeEtudiantsAbsents.Count;
+            int nombreTotal = ListeEtudiants.Count;
+            double moyenneAbsences = (double)nombreAbsents / nombreTotal;
+            double moyenneAbsencesEnPourcentage = moyenneAbsences * 100.0;
+            return Math.Round(moyenneAbsencesEnPourcentage, 2); // Arrondir à 2 chiffres après la virgule
+        }
+        else
+        {
+            Console.WriteLine("La liste des étudiants est vide. Impossible de calculer la moyenne des absences.");
+            return 0.0;
+        }
+    }
+
+
+    //sauvegarde les stat 
+    public void SauvegarderMoyenneAbsencesDansFichier(string cheminFichier)
+    {
+        double moyenneAbsencesPourcentage = CalculerMoyenneAbsencesEnPourcentage();
+        int moyenneAbsences = (int)moyenneAbsencesPourcentage; // Convertir en entier
+        string jsonData = JsonConvert.SerializeObject(new { MoyenneAbs = moyenneAbsences }, Formatting.Indented);
+        File.WriteAllText(cheminFichier, jsonData);
+
+    }
+
+
+    //lire la stat
+    public void LireStatDepuisFichier(string cheminFichier)
+    {
+        if (File.Exists(cheminFichier))
+        {
+            try
+            {
+                string jsonData = File.ReadAllText(cheminFichier);
+                dynamic statObject = JsonConvert.DeserializeObject(jsonData);
+
+                double statValue = statObject["MoyenneAbs"].Value; // Assurez-vous d'ajuster la clé en fonction de votre structure JSON
+
+                Console.WriteLine("La moyenne des absences sur le total est de  : " + statValue + "%");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erreur lors de la lecture du fichier stat.json : " + ex.Message);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Le fichier stat.json n'existe pas.");
+        }
+    }
+
+
+
 }

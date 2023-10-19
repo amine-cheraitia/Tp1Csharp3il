@@ -43,7 +43,10 @@ public class Menu
                 Console.Clear();
                 break;
             case "3":
-                // Appel de la méthode EnregistrerDonneesEnJson de la classe Appel
+                //Afficher les stat
+                Console.Clear();
+                gestionAbsences.LireStatDepuisFichier("stat.json");
+                Console.ReadKey();
                 break;
             case "4":
                 Console.Clear();
