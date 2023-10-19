@@ -49,7 +49,18 @@ public class Authentification
         while (checkAuth == false)
         {
             Console.Clear();
+            Console.WriteLine(@"
 
+            ______ _                                      
+            | ___ (_)                                     
+            | |_/ /_  ___ _ ____   _____ _ __  _   _  ___ 
+            | ___ \ |/ _ \ '_ \ \ / / _ \ '_ \| | | |/ _ \
+            | |_/ / |  __/ | | \ V /  __/ | | | |_| |  __/
+            \____/|_|\___|_| |_|\_/ \___|_| |_|\__,_|\___|
+                                                        
+                                                        
+
+            ");
             Console.WriteLine("Veuillez entrer votre nom d'utilisateur :");
             var utilisateurSaisi = Console.ReadLine();
             Console.WriteLine("Veuillez entrer votre mot de passe :");
@@ -69,7 +80,7 @@ public class Authentification
             {
                 if (tentative == 3)
                 {
-                    Console.WriteLine("Authentification échouée pour la troisieme fois. L'application se ferme.");
+                    Console.WriteLine("Authentification échouée pour la troisième fois. L'application se ferme.");
                     Environment.Exit(0);
                 }
                 tentative++;

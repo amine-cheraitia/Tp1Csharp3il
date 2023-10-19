@@ -1,8 +1,8 @@
 [
   {
-    "nom": "Brice",
+    "nom": "Amine",
     "EstPresent": false,
-    "mode": "FA"
+    "mode": "FE"
   },
   {
     "nom": "Oussama",
@@ -10,9 +10,19 @@
     "mode": "FA"
   },
   {
+    "nom": "Khalil",
+    "EstPresent": false,
+    "mode": "FA"
+  },
+  {
     "nom": "Emnna",
     "EstPresent": false,
     "mode": "FE"
+  },
+  {
+    "nom": "Mouadhafer",
+    "EstPresent": false,
+    "mode": "FA"
   },
   {
     "nom": "Claudia",
