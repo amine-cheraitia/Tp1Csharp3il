@@ -5,27 +5,17 @@
     "mode": "FE"
   },
   {
-    "nom": "Oussama",
-    "EstPresent": false,
-    "mode": "FA"
-  },
-  {
-    "nom": "Khalil",
-    "EstPresent": false,
-    "mode": "FA"
-  },
-  {
-    "nom": "Emnna",
-    "EstPresent": false,
-    "mode": "FE"
-  },
-  {
     "nom": "Mouadhafer",
     "EstPresent": false,
     "mode": "FA"
   },
   {
     "nom": "Claudia",
+    "EstPresent": false,
+    "mode": "FA"
+  },
+  {
+    "nom": "Alice",
     "EstPresent": false,
     "mode": "FA"
   }

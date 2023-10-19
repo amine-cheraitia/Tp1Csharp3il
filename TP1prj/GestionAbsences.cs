@@ -127,6 +127,27 @@ public class GestionAbsences
             Console.WriteLine("La liste des absences est actuellement vide. Avez-vous pensé à vérifier qui est absent en classe ");
         }
     }
+    public void AfficherLalisteEtudiants()
+    {
+        Console.Clear();
+        if (ListeEtudiants.Count > 0)
+        {
+
+            Console.WriteLine("Les étudiants sont :\n");
+            int longueurMaxNom = ListeEtudiants.Max(e => e.nom.Length) + 2; // Trouve la longueur maximale du nom
+            foreach (var etudiant in ListeEtudiants)
+            {
+
+                string nomAjuste = etudiant.nom.PadRight(longueurMaxNom);
+                Console.WriteLine($"\t- {nomAjuste} - {etudiant.mode}");
+
+            }
+        }
+        else
+        {
+            Console.WriteLine("La liste des étudiants est actuellement vide. ");
+        }
+    }
     //stat
     public double CalculerMoyenneAbsencesEnPourcentage()
     {

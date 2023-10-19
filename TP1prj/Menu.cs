@@ -21,9 +21,10 @@ public class Menu
         Console.WriteLine("\n\n\n\n");
         Console.WriteLine("Menu de l'application :");
         Console.WriteLine("1. Saisir la présence");
-        Console.WriteLine("2. Afficher la liste des absents");
-        Console.WriteLine("3. Afficher les statistiques");
-        Console.WriteLine("4. Quitter");
+        Console.WriteLine("2. Afficher la liste des étudiants");
+        Console.WriteLine("3. Afficher la liste des absents");
+        Console.WriteLine("4. Afficher les statistiques");
+        Console.WriteLine("5. Quitter");
 
         var choix = Console.ReadLine();
 
@@ -33,22 +34,29 @@ public class Menu
         {
             case "1":
                 // Appel de la méthode SaisirPresence de la classe Appel
-
                 gestionAbsences.VerifierPresences();
                 break;
             case "2":
+                Console.Clear();
+                gestionAbsences.AfficherLalisteEtudiants();
+                Console.ReadKey();
+                Console.Clear();
+                break;
+
+
+            case "3":
                 // Appel de la méthode AfficherAbsents de la classe Appel
                 gestionAbsences.AfficherEtudiantsAbsents();
                 Console.ReadKey();
                 Console.Clear();
                 break;
-            case "3":
+            case "4":
                 //Afficher les stat
                 Console.Clear();
                 gestionAbsences.LireStatDepuisFichier("stat.json");
                 Console.ReadKey();
                 break;
-            case "4":
+            case "5":
                 Console.Clear();
                 Console.WriteLine("Au revoir !");
                 Task.Delay(TimeSpan.FromSeconds(3)).Wait();
