@@ -49,6 +49,9 @@ public class GestionAbsences
     }
     public void VerifierPresences()
     {
+        //vider le fichier absence 
+        File.WriteAllText("absents.json", string.Empty);
+        ListeEtudiantsAbsents = new List<Etudiant>();
         Console.Clear();
         foreach (var etudiant in ListeEtudiants)
         {
@@ -102,15 +105,23 @@ public class GestionAbsences
 
     public void AfficherEtudiantsAbsents()
     {
-        Console.WriteLine("la taille de ma liste est de " + ListeEtudiantsAbsents.Count());
-        Console.WriteLine("Les étudiants absents sont :\n");
-        int longueurMaxNom = ListeEtudiantsAbsents.Max(e => e.nom.Length) + 2; // Trouve la longueur maximale du nom
-        foreach (var etudiantAbsent in ListeEtudiantsAbsents)
+        Console.Clear();
+        if (ListeEtudiantsAbsents.Count > 0)
         {
 
-            string nomAjuste = etudiantAbsent.nom.PadRight(longueurMaxNom);
-            Console.WriteLine($"\t- {nomAjuste} - {etudiantAbsent.mode}");
+            Console.WriteLine("Les étudiants absents sont :\n");
+            int longueurMaxNom = ListeEtudiantsAbsents.Max(e => e.nom.Length) + 2; // Trouve la longueur maximale du nom
+            foreach (var etudiantAbsent in ListeEtudiantsAbsents)
+            {
 
+                string nomAjuste = etudiantAbsent.nom.PadRight(longueurMaxNom);
+                Console.WriteLine($"\t- {nomAjuste} - {etudiantAbsent.mode}");
+
+            }
+        }
+        else
+        {
+            Console.WriteLine("La liste des absences est actuellement vide. Avez-vous pensé à vérifier qui est absent en classe ");
         }
     }
 }

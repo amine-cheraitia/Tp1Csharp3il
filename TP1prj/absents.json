@@ -3,5 +3,20 @@
     "nom": "Brice",
     "EstPresent": false,
     "mode": "FA"
+  },
+  {
+    "nom": "Oussama",
+    "EstPresent": false,
+    "mode": "FA"
+  },
+  {
+    "nom": "Emnna",
+    "EstPresent": false,
+    "mode": "FE"
+  },
+  {
+    "nom": "Claudia",
+    "EstPresent": false,
+    "mode": "FA"
   }
 ]

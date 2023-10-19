@@ -36,6 +36,9 @@ public class Menu
                 // Appel de la méthode EnregistrerDonneesEnJson de la classe Appel
                 break;
             case "4":
+                Console.Clear();
+                Console.WriteLine("Au revoir !");
+                Task.Delay(TimeSpan.FromSeconds(3)).Wait();
                 Environment.Exit(0);
                 break;
             default:
